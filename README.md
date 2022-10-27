@@ -10,7 +10,7 @@ Two types of Authentication are covered:
 2. Credentials based Login
 
 The sample Login page is only intended for example purposes and designed for a web-based application. 
-
+![image](https://user-images.githubusercontent.com/23314441/198387317-8e34bff0-a6e2-49bf-9dad-51cc051124cb.png)
 # Usage
 At the main please provide the Base URL and the authorization endpoint. 
 
