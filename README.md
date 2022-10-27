@@ -3,7 +3,7 @@
 # Introduction 
 Flutter_BoilerPlate_With_Auth
 
-Resuable App Architecture with generic authentication mechanisms, BLoC state management, folder architecture, Multiple flavors config, API Consuming Mechanism,Sample login page. The boiler plate also contains app authentication reactor, app lifecycle observer. 
+Resuable App Architecture with generic authentication mechanisms, BLoC state management, folder structure, multiple flavors config, API Client, sample login page. The boiler plate also contains app authentication reactor, app lifecycle observer. 
 Using this boiler plate one can easily reach a boilter plate to develop a huge-sized Flutter app. 
 Two types of Authentication are covered:
 1. External Login
@@ -76,7 +76,7 @@ class UserRepository {
 ```
 # Getting Started
 1. Install Flutter SDK: https://flutter.dev/docs/get-started/install/windows
-2. Install missing packages: flutter packages get
+2. Install missing packages: flutter packages get / Flutter pub get
 3. Switch channel to DEV: flutter channel dev
 4. Upgrade Flutter: flutter upgrade
 
