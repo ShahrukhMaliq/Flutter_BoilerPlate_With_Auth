@@ -49,7 +49,7 @@ values: FlavorValues(
               authorizationRedirectUrl: "",
               logoutUrl: "")
 ```
-In the User repository please provide the  endpoint URL for the credentials base login 
+In the User repository please provide the  endpoint URL for the credentials based login 
 ```
 class UserRepository {
   ApiClient _apiClient = ApiClient();
