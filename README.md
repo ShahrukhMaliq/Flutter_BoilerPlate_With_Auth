@@ -3,16 +3,16 @@
 # Introduction 
 Flutter_BoilerPlate_With_Auth
 
-Flutter Resuable App Architecture with generic Authentication mechanisms, BLoC state management, folder architecture, Multiple flavors config, API Consuming Mechanism,Sample login page. The boiler plate  also contains app authentication reactor, app lifecycle observer. 
-Using this boiler plate one can easily reach a boilter plate for a huge sized flutter app.
-Two types of Authentication are covered
+Resuable App Architecture with generic Authentication mechanisms, BLoC state management, folder architecture, Multiple flavors config, API Consuming Mechanism,Sample login page. The boiler plate  also contains app authentication reactor, app lifecycle observer. 
+Using this boiler plate one can easily reach a boilter plate for a huge-sized Flutter app.
+Two types of Authentication are covered:
 1. External Login
-2. Credentials Login
+2. Credentials based Login
 
-The sample page Login is only intended for example purposes and designed for a web application. 
+The sample Login page is only intended for example purposes and designed for a web-based application. 
 
 # Usage
-At the main please provide the Base URL and the authorization endpoint. For external login please provide authenticationExternalConfig in the Flavor values.
+At the main please provide the Base URL and the authorization endpoint. 
 
 ```
 void main() async {
@@ -34,6 +34,20 @@ void main() async {
   );
   runApp(MyApp());
 }
+```
+
+For external login please provide authenticationExternalConfig in the Flavor values.
+```
+values: FlavorValues(
+          baseUrl: "", //please provide baseUrl
+          authenticationExternalConfig: AuthenticationExternalConfig(
+              title: 'Login IDP',
+              authorizationAuthorizationEndpoint: "",
+              authorizationTokenEndpoint: "",
+              authorizationAppIdentifier: "",
+              authorizationAppSecret: "",
+              authorizationRedirectUrl: "",
+              logoutUrl: "")
 ```
 In the User repository please provide the  endpoint URL for the credentials base login 
 ```
