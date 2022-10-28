@@ -19,8 +19,19 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   ) async* {
     if (event is CredentialsLoginEvent) {
       yield* _mapCredentialsLoginEventToState(event, state);
+    } else if (event is ExternalLoginEvent) {
+      yield* _mapExternalLoginEventToState(event, state);
     } else if (event is LogOutEvent) {
       yield* _mapLogOutEventToState(event, state);
+    }
+  }
+
+  Stream<LoginState> _mapExternalLoginEventToState(
+      ExternalLoginEvent event, LoginState state) async* {
+    try {
+      await _authenticationContext.externalLogIn();
+    } catch (err) {
+      yield state.copyWith(authenticationFailed: true);
     }
   }
 

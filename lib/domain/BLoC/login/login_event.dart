@@ -7,6 +7,11 @@ abstract class LoginEvent extends Equatable {
   List<Object> get props => [];
 }
 
+//Add external logins to your UI and add this event
+class ExternalLoginEvent extends LoginEvent {
+  const ExternalLoginEvent();
+}
+
 /// Event fired when user clicks on 'Credentials Login' in Welcome page
 class CredentialsLoginEvent extends LoginEvent {
   CredentialsLoginEvent(this.login, this.password);
