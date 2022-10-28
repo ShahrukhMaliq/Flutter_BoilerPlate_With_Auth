@@ -191,7 +191,7 @@ class AuthenticationContext {
 
   Future<User> _tryGetUser(oauth2.Client client) async {
     try {
-      var getUserUrl = ApiClient.getFullUrl('api/Category/AM/user');
+      var getUserUrl = ApiClient.getFullUrl('api/v1/user');//provide API endpoint URL for User
       var userResponse = await client.get(Uri.parse(getUserUrl));
       var userJson = json.decode(userResponse.body);
       var user = User.fromJson(userJson);
